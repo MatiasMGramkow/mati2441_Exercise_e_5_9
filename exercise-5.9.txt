@@ -1,0 +1,10 @@
+# exercise 5.9: List the names and addresses of all guests living in London, 
+
+# alphabetically ordered by name.
+
+SELECT Guest.guestName, Guest.guestAddress, Booking.hotelNo
+FROM Guest LEFT JOIN Booking ON Guest.GuestNo = Booking.guestNo 
+
+WHERE hotelNo = '2'
+
+ORDER BY guestName DESC;
